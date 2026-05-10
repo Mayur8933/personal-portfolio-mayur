@@ -1,0 +1,28 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.index {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: light-dark(#bbb, #444);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: light-dark(#111, #f0f0eb);
+  flex-shrink: 0;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: light-dark(rgba(0,0,0,0.08), rgba(255,255,255,0.07));
+}

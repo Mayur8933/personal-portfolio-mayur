@@ -1,0 +1,65 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background: light-dark(rgba(255,255,255,0.85), rgba(10,10,14,0.88));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid light-dark(rgba(0,0,0,0.06), rgba(255,255,255,0.06));
+}
+
+.brand {
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+.brand:hover { opacity: 1; }
+
+.brandText {
+  font-family: 'DM Mono', monospace;
+  letter-spacing: -0.01em;
+}
+
+.links {
+  display: flex;
+  gap: 2px;
+}
+
+.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-family: inherit;
+  color: light-dark(#555, #999);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.15s, background 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.link:hover {
+  color: light-dark(#111, #fff);
+  background: light-dark(rgba(0,0,0,0.05), rgba(255,255,255,0.07));
+}
+
+.active {
+  color: light-dark(#111, #fff) !important;
+  font-weight: 500;
+}
+
+.themeToggle {
+  color: light-dark(#666, #888);
+}
+
+@media (max-width: 640px) {
+  .links { display: none; }
+  .nav { padding: 0 1.25rem; }
+}
